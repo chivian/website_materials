@@ -1,374 +1,219 @@
-# Financial Ratio Benchmarking Framework
+# AI-Driven Risk Profiling & Analytics Framework
 
-**A Statistical Benchmarking Framework for Tax Compliance Risk Assessment in Data-Constrained Environments**
+**An Explainable AI Framework for Tax Compliance Risk Assessment in Data-Constrained Environments**
 
 **Developed by:** Engr. Chinwe Vivian Aliyu  
 **Research foundation:** *Development of an Explainable AI Tax Compliance Risk Assessment System for Nigeria*  
 **Institution:** Miva Open University
 
-## 1. Overview
+## Overview
 
-The Financial Ratio Benchmarking Framework is a research-informed methodology for developing comparative financial benchmarks, identifying unusual financial patterns, and generating preliminary tax compliance risk indicators from taxpayer financial and administrative data.
+The AI-Driven Risk Profiling & Analytics Framework is a research-derived methodological framework for developing explainable, data-driven taxpayer compliance risk assessment systems, particularly in environments where verified historical audit outcomes and pre-classified compliance risk records are unavailable.
 
-The framework is particularly relevant to tax administrations where historical taxpayer financial information is available but verified audit outcomes and previously classified compliance risk records are limited or unavailable.
+The framework builds on research undertaken by Engr. Chinwe Vivian Aliyu during her Professional Master's programme in Information Technology at Miva Open University.
 
-It provides a structured approach to analysing financial ratios within comparable taxpayer groups, assessing deviations from established benchmarks, and translating those deviations into preliminary risk scores and classifications.
+It integrates financial benchmarking, statistical risk classification, supervised machine learning, Explainable Artificial Intelligence (XAI), and interactive decision support into a structured risk intelligence methodology.
 
-The framework is developed from the financial benchmarking and statistical risk assessment methodology underpinning the master's research of Engr. Chinwe Vivian Aliyu, titled *Development of an Explainable AI Tax Compliance Risk Assessment System for Nigeria*, undertaken at Miva Open University.
+Its central proposition is that the absence of historical labelled audit outcomes should not necessarily prevent tax administrations from exploring advanced analytical approaches to compliance risk assessment.
 
-It is intended to provide a reusable methodological foundation for financial risk analysis, taxpayer segmentation, statistical benchmarking, and data-driven compliance risk assessment.
+Where sufficient financial and administrative information exists, statistically derived risk indicators can provide provisional classifications that support machine learning development and risk prioritization.
 
-## 2. The Problem
+These classifications must be understood as analytical estimates rather than verified findings of taxpayer non-compliance.
 
-Tax administrations increasingly have access to digital financial and administrative records. However, the availability of financial information does not necessarily mean that the institution has a reliable system for interpreting that information in relation to potential compliance risk.
+## The Problem
 
-Several challenges arise:
+Supervised machine learning typically requires historical observations with known outcomes.
 
-- Financial characteristics differ substantially across industries and business sizes.
-- Uniform financial thresholds may not adequately reflect sector-specific operating conditions.
-- Financial indicators are often assessed individually rather than within a structured benchmarking methodology.
-- Historical audit outcomes may not be available in a form suitable for supervised machine learning.
-- Taxpayer financial data may contain inconsistencies, incomplete records, and extreme values.
-- Institutions may lack standardized methods for converting financial deviations into preliminary risk indicators.
+In tax compliance risk assessment, these outcomes may include completed audit findings, confirmed non-compliance cases, or established risk classifications.
 
-These limitations can make risk-based taxpayer prioritization difficult, even when substantial financial data exists.
+However, many tax administrations face a fundamental data challenge:
 
-The framework addresses this challenge through structured financial ratio benchmarking and statistical risk assessment.
+- Historical taxpayer financial records may be available electronically.
+- Past audit results may be incomplete, inaccessible, inconsistently structured, or unavailable as labelled datasets.
+- Existing audit selection processes may depend heavily on predetermined rules and professional judgement.
+- Advanced predictive models may be difficult to develop without reliable target classifications.
+- Black-box machine learning outputs may be difficult for compliance professionals to interpret.
 
-## 3. Framework Objectives
+The framework addresses the methodological challenge of transforming available taxpayer financial information into structured, interpretable risk intelligence without assuming the prior existence of verified audit labels.
 
-The framework seeks to:
+## Framework Objectives
 
-1. Establish a consistent methodology for calculating and analysing taxpayer financial ratios.
-2. Develop comparative financial benchmarks across relevant taxpayer peer groups.
-3. Incorporate industry, subsector, business-size, and reporting-period considerations into financial comparisons.
-4. Identify statistically unusual financial characteristics that may warrant further investigation.
-5. Integrate relevant tax-domain indicators into financial risk assessment.
-6. Support the construction of preliminary taxpayer risk scores and classifications.
-7. Provide a methodological foundation for risk assessment where verified historical compliance labels are unavailable.
-8. Support transparent, repeatable, and evidence-informed compliance analysis.
+The framework aims to:
 
-## 4. Core Framework Components
+1. Establish a structured approach to taxpayer compliance risk assessment using available financial and administrative data.
+2. Incorporate statistically derived financial risk classifications into machine learning development.
+3. Enable the development of preliminary risk classification models where historical labelled audit outcomes are unavailable.
+4. Reduce the risk of target leakage during predictive model development.
+5. Integrate explainability into machine learning-based compliance assessment.
+6. Support portfolio-level and taxpayer-level risk analysis.
+7. Improve transparency and consistency in risk-based compliance prioritization.
+8. Preserve professional judgement and institutional oversight in consequential decisions.
 
-The framework consists of six interconnected components.
+## Conceptual Architecture
 
-### Component 1: Financial Data Preparation and Quality Assessment
+The framework comprises six interconnected components.
 
-The first component establishes the reliability and suitability of the financial data used for benchmarking.
+### 1. Data Acquisition, Preparation and Validation
 
-Activities include:
+Relevant taxpayer financial and tax-related records are collected, validated, standardized, and prepared for analysis.
 
-- Identification of relevant financial and tax-related variables.
-- Standardization of financial reporting fields.
-- Assessment of completeness and consistency.
-- Treatment of missing or invalid observations.
-- Identification of extreme financial values.
-- Verification of reporting periods and applicable accounting definitions.
+This component addresses data completeness, financial variable consistency, missing values, and the suitability of the available information for analytical modelling.
 
-Data quality is essential because unreliable financial inputs can distort both the benchmarks and the resulting risk assessments.
+### 2. Benchmark-Driven Risk Label Construction
 
-### Component 2: Taxpayer Segmentation and Peer-Group Classification
+The framework incorporates provisional risk classifications derived from the complementary **Financial Ratio Benchmarking Framework**.
 
-Financial performance and tax-related ratios can differ significantly across economic sectors, industries, subsectors, and business sizes.
+Financial ratios, statistical deviations from peer-group benchmarks, and selected tax-domain indicators are used to generate preliminary risk scores and classifications.
 
-The framework therefore emphasizes the importance of comparing taxpayers against appropriate peer groups rather than applying identical benchmarks across an entire taxpayer population.
+These classifications provide a target variable for subsequent supervised machine learning development.
 
-Segmentation considerations include:
+This component is especially relevant where historical audit outcome labels are unavailable.
 
-- Industry and economic sector.
-- Industry subsector.
-- Annual turnover or business-size category.
-- Financial reporting period.
-- Availability of sufficient comparable observations.
+### 3. Machine Learning Model Development
 
-Turnover-based classifications may be adapted to the economic conditions and reporting periods of the jurisdiction in which the framework is implemented.
+Supervised machine learning is applied to the prepared analytical dataset.
 
-Peer groups should be sufficiently comparable and statistically adequate to support meaningful benchmark development.
+The underlying research implemented a Random Forest classifier for predicting Low-, Medium-, and High-Risk classifications.
 
-### Component 3: Financial Ratio Selection and Development
+A critical methodological requirement is controlling target leakage by excluding variables that directly reveal or reproduce the constructed target labels.
 
-The framework uses financial ratios to transform accounting and tax-related information into standardized analytical indicators.
+The objective is to develop a model that learns relevant relationships from permissible predictive features rather than simply accessing the target-generation outputs.
 
-The underlying research identifies financial indicators across taxation, profitability, operating performance, capital structure, and liquidity.
+### 4. Explainable Artificial Intelligence
 
-The broader ratio methodology may be organized into the following analytical categories.
+Explainability techniques are integrated to provide insight into the factors influencing model-generated risk classifications.
 
-#### A. Taxation Ratios
+The underlying research implemented SHAP (SHapley Additive exPlanations) to interpret individual predictions and identify influential financial indicators.
 
-Indicators examining relationships between financial activity, profitability, and tax-related amounts.
+This component helps analysts understand why a taxpayer has received a particular model-generated classification.
 
-Examples include:
+### 5. Risk Intelligence and Decision Support
 
-- Total Profit to Turnover.
-- Corporate Income Tax Paid to Turnover.
-- Education Tax Paid to Turnover.
-- Corporate Income Tax Paid to Net Profit.
-- Capital Allowance for the Year to Turnover.
-- Capital Allowance Utilized to Turnover.
+Predictive outputs are translated into information that can support compliance risk assessment and prioritization.
 
-#### B. Profitability Ratios
+The research demonstrated this through a Streamlit-based prototype incorporating:
 
-Indicators examining the relationship between profitability, revenue, assets, and equity.
+- Portfolio-level risk distribution.
+- Sector-level analytical views.
+- Taxpayer risk ranking.
+- Individual taxpayer risk assessment.
+- Financial benchmark comparisons.
+- Model prediction explanations.
 
-Examples include:
+These outputs support analytical review rather than automatically determining audit or enforcement actions.
 
-- Net Profit to Total Assets.
-- Net Profit to Shareholders' Equity.
-- Gross Profit to Turnover.
-- Net Profit to Turnover.
-- Gross Profit to Cost of Sales.
-- Cost of Sales to Turnover.
+### 6. Model Governance, Validation and Improvement
 
-#### C. Operating Efficiency Ratios
+The framework recognizes the importance of model governance, independent validation, monitoring, and professional oversight.
 
-Indicators examining operating costs and the relationship between expenses and financial performance.
+Where verified audit outcomes become available, they should be used to assess the relationship between model-generated risk classifications and actual compliance findings.
 
-Examples include:
+Periodic review is necessary to evaluate model performance, data quality, changing taxpayer behaviour, and the continuing relevance of underlying financial indicators.
 
-- Operating Expenses to Turnover.
-- Operating Expenses to Net Profit.
-- Loan Loss Provisions to Gross Loans, where applicable.
+## Methodological Workflow
 
-#### D. Capital Structure and Financial Position Ratios
+The framework follows two principal phases.
 
-Indicators examining the financial structure and asset position of an entity.
+### Phase 1: Model Development
 
-Examples include:
+1. Acquire and prepare historical taxpayer financial and administrative records.
+2. Calculate relevant financial ratios and indicators.
+3. Apply the Financial Ratio Benchmarking Framework to construct preliminary risk labels.
+4. Develop an analytical dataset containing financial, sectoral, and selected tax-related predictive variables.
+5. Separate target-generation variables from permissible model inputs to control leakage.
+6. Train and evaluate a supervised machine learning classifier.
+7. Integrate explainability methods.
+8. Validate, document, and approve the model for its intended use.
 
-- Shareholders' Equity to Total Assets.
-- Liquid Assets to Total Assets.
+### Phase 2: Operational Risk Assessment
 
-#### E. Liquidity and Other Financial Ratios
+1. Receive and validate new taxpayer records.
+2. Prepare the required predictive features.
+3. Apply the previously trained model to generate provisional risk classifications.
+4. Produce explanations for individual predictions.
+5. Present portfolio and taxpayer-level analytical outputs.
+6. Support professional review and risk-based prioritization.
+7. Capture feedback and verified outcomes for future model evaluation and improvement.
 
-Indicators examining short-term financial capacity and relationships between financial resources and obligations.
+The operational phase uses an approved, previously trained model. It does not require regenerating training labels for every new taxpayer prediction.
 
-Examples include:
+## Relationship to the Financial Ratio Benchmarking Framework
 
-- Current Ratio.
-- Liquidity Ratio.
-- Return on Capital Employed.
+The AI-Driven Risk Profiling & Analytics Framework and the Financial Ratio Benchmarking Framework are complementary but distinct methodological outputs.
 
-The selection and interpretation of individual ratios should reflect industry characteristics, accounting definitions, data availability, and the analytical objectives of the assessment.
+The **Financial Ratio Benchmarking Framework** establishes the statistical foundation for evaluating taxpayer financial characteristics against relevant peer-group benchmarks and deriving preliminary risk indicators.
 
-Not every ratio will be applicable to every taxpayer or industry.
+The **AI-Driven Risk Profiling & Analytics Framework** builds on that foundation by incorporating supervised machine learning, explainability, and decision-support capabilities.
 
-## 5. Statistical Benchmark Development
+Together, they demonstrate a pathway from available financial data to interpretable risk intelligence in environments where verified historical compliance labels are limited.
 
-Financial benchmarks are developed from the distribution of relevant ratios within comparable taxpayer groups.
+## Research Foundation and Prototype
 
-The objective is to establish reference values or ranges that describe financial patterns among similar entities.
-
-The benchmarking process involves:
-
-1. Defining the relevant peer group.
-2. Calculating financial ratios for eligible observations.
-3. Assessing data quality and the distribution of each ratio.
-4. Establishing appropriate statistical reference values or ranges.
-5. Comparing individual taxpayer ratios with their peer-group benchmarks.
-6. Identifying significant deviations requiring further analysis.
-
-The choice of statistical estimators, deviation measures, and benchmark thresholds should be documented and justified according to the data characteristics and intended application.
-
-The framework does not assume that a single benchmark or threshold is appropriate for every industry or financial indicator.
-
-## 6. Financial Deviation and Risk Indicator Assessment
-
-The framework examines how individual taxpayer financial ratios compare with relevant peer-group benchmarks.
-
-Potential analytical signals include:
-
-- Material deviations from sector or subsector financial patterns.
-- Unusual relationships between reported turnover and profitability.
-- Significant differences in tax-related ratios among comparable taxpayers.
-- Financial patterns that warrant further investigation when considered alongside tax-domain knowledge.
-
-The interpretation of these deviations must be context-sensitive.
-
-A statistically unusual financial ratio may reflect legitimate business circumstances, accounting practices, economic conditions, or differences in operating models.
-
-Accordingly, benchmark deviations are treated as indicators for further examination rather than proof of non-compliance.
-
-## 7. Preliminary Risk Scoring and Classification
-
-A distinctive application of the framework is its role in supporting preliminary risk assessment where historical labelled audit outcomes are unavailable.
-
-The underlying research describes a statistical risk-assessment approach in which financial benchmark deviations are combined with selected tax-domain indicators to generate provisional risk scores.
-
-These scores provide the basis for classifying taxpayer records into three analytical categories:
-
-- **Low Risk:** Relatively limited concern under the defined statistical assessment methodology.
-- **Medium Risk:** Financial indicators or deviations that may warrant additional review.
-- **High Risk:** More pronounced combinations of financial and tax-related risk signals that may justify prioritized examination.
-
-These categories are provisional analytical classifications, not verified findings of taxpayer non-compliance.
-
-The precise scoring rules, indicator weights, and classification thresholds require appropriate methodological documentation, testing, and governance before operational implementation.
-
-## 8. Framework Methodology
-
-The framework follows an eight-stage analytical lifecycle.
-
-### Stage 1: Data Identification and Preparation
-
-Identify relevant financial and tax-related variables, establish data quality requirements, and prepare the analytical dataset.
-
-### Stage 2: Taxpayer Segmentation
-
-Group taxpayers into appropriate comparison categories based on relevant industry, subsector, business-size, and reporting-period characteristics.
-
-### Stage 3: Financial Ratio Calculation
-
-Calculate applicable financial and taxation ratios using consistent definitions and validated financial inputs.
-
-### Stage 4: Statistical Benchmark Construction
-
-Develop appropriate benchmark statistics and reference ranges for each eligible financial ratio and peer group.
-
-### Stage 5: Benchmark Deviation Analysis
-
-Compare taxpayer ratios with the relevant benchmarks and identify statistically significant or otherwise analytically relevant deviations.
-
-### Stage 6: Tax-Domain Risk Indicator Integration
-
-Incorporate selected tax-related indicators and contextual considerations into the statistical assessment.
-
-### Stage 7: Preliminary Risk Scoring and Classification
-
-Combine the defined indicators through a documented scoring methodology to generate preliminary risk scores and analytical risk categories.
-
-### Stage 8: Validation, Review and Benchmark Maintenance
-
-Evaluate the stability and usefulness of the benchmarks, review the appropriateness of risk classifications, and update the methodology as additional data and verified compliance outcomes become available.
-
-## 9. Application in Environments Without Historical Audit Labels
-
-One of the framework's principal applications is supporting tax compliance risk assessment where historical audit results have not been systematically classified or made available for analytical modelling.
-
-In such environments, traditional supervised machine learning approaches face difficulties because verified target outcomes may be missing.
-
-The Financial Ratio Benchmarking Framework provides an alternative starting point.
-
-By using available financial records, peer-group benchmarks, statistical deviations, and tax-domain indicators, the framework can support the generation of preliminary risk classifications from previously unlabelled taxpayer data.
-
-These classifications may subsequently provide a research basis for developing predictive risk models.
-
-However, statistical classifications constructed from financial indicators must not be presented as equivalent to independently verified audit outcomes.
-
-Independent validation remains necessary to establish their relationship with actual compliance findings.
-
-## 10. Relationship to the AI-Driven Risk Profiling & Analytics Framework
-
-The Financial Ratio Benchmarking Framework and the AI-Driven Risk Profiling & Analytics Framework are two distinct but complementary methodological outputs developed from the same research programme.
-
-**Financial Ratio Benchmarking Framework**
-
-Focuses on:
-
-- Financial ratio calculation.
-- Taxpayer peer-group segmentation.
-- Statistical benchmark development.
-- Financial deviation analysis.
-- Tax-domain risk indicators.
-- Preliminary risk scoring and classification.
-
-**AI-Driven Risk Profiling & Analytics Framework**
-
-Builds upon the benchmarking methodology through:
-
-- Supervised machine learning.
-- Predictive taxpayer risk classification.
-- Target-leakage controls.
-- Explainable Artificial Intelligence.
-- Risk intelligence visualization.
-- Decision-support integration.
-
-The benchmarking framework can function as a standalone statistical assessment methodology or serve as an analytical foundation for a broader machine learning-based risk intelligence system.
-
-## 11. Research Foundation
-
-The framework is developed from the financial benchmarking and statistical risk assessment foundations described in:
+The framework is derived from:
 
 **Aliyu, Chinwe Vivian.** *Development of an Explainable AI Tax Compliance Risk Assessment System for Nigeria.* Professional Master's research project, Miva Open University.
 
-The research describes the use of benchmarked financial ratios, statistical deviations, and tax-domain indicators to construct High-, Medium-, and Low-Risk classifications from previously unlabelled taxpayer financial data.
+The underlying research demonstrated an integrated prototype using:
 
-These classifications subsequently supported the development of the research's explainable machine learning prototype.
+- Financial benchmarking-derived risk classifications.
+- Random Forest machine learning.
+- SHAP-based model explainability.
+- Streamlit for interactive decision support.
+- Portfolio-level and individual taxpayer risk analysis.
 
-The project also references an earlier statistical financial benchmarking study. The complete methodology, including any formal publication of that earlier work, will be documented in the framework's supporting research materials as they become available for public release.
+The prototype was evaluated for functionality against the project's objectives.
 
-The present framework organizes these research foundations into a reusable methodology for financial benchmarking and preliminary compliance risk assessment.
+The research does not establish that the generated risk classifications are equivalent to independently verified audit outcomes. Further empirical validation is necessary before operational claims about the detection of actual non-compliance can be made.
 
-## 12. Potential Applications
+## Potential Applications
 
-Potential applications include:
+The framework may support:
 
-- Development of sector-specific financial ratio benchmarks.
-- Taxpayer financial performance comparisons.
-- Statistical identification of unusual financial patterns.
-- Preliminary tax compliance risk assessment.
-- Risk-based audit prioritization.
+- Taxpayer compliance risk profiling.
+- Risk-based audit case prioritization.
 - Revenue assurance analytics.
-- Construction of provisional risk labels for research and machine learning development.
-- Financial risk intelligence in data-constrained public institutions.
+- Sector-level compliance risk monitoring.
+- Explainable machine learning in public administration.
+- Development of compliance risk intelligence capabilities in data-constrained environments.
 
-The framework may also inform broader financial and regulatory risk analytics where comparable financial data is available.
-
-## 13. Intended Audience
+## Intended Users
 
 The framework is relevant to:
 
 - Tax administrations and revenue authorities.
 - Tax audit and compliance professionals.
-- Financial analysts and economists.
-- Data scientists and statistical analysts.
-- Government revenue assurance teams.
-- Public-sector digital transformation professionals.
-- Researchers in taxation, financial analytics, and regulatory technology.
+- Data scientists and machine learning engineers.
+- Government digital transformation teams.
+- Public-sector risk analysts.
+- Researchers in regulatory analytics and explainable AI.
 
-## 14. Implementation and Governance Considerations
+## Governance and Responsible Use
 
-Implementation should account for:
+The framework is intended to support human decision-making.
 
-- Data accuracy and completeness.
-- Consistent financial ratio definitions.
-- Appropriate taxpayer segmentation.
-- Adequate peer-group sample sizes.
-- Industry-specific financial characteristics.
-- Reporting-period comparability.
-- Transparent benchmark and scoring methodologies.
-- Independent validation of analytical risk classifications.
-- Human review of risk assessment outputs.
-- Data protection, confidentiality, and institutional authorization.
+Its outputs should not be treated as conclusive evidence of non-compliance, used as the sole basis for enforcement, or interpreted as independently verified audit findings.
 
-Benchmark deviations should support further professional examination rather than automatically trigger adverse determinations.
+Implementation requires appropriate data protection, access controls, independent validation, institutional authorization, and human oversight.
 
-## 15. Documentation and Development Status
+## Documentation Status
 
-**Status:** Research-derived framework under further formalization.
+**Status:** Research-derived framework under further development.
 
-Planned public documentation may include:
+Future public resources may include:
 
-- Detailed financial benchmarking methodology.
-- Financial ratio definitions and calculation guidance.
-- Taxpayer segmentation methodology.
-- Statistical benchmark development procedures.
-- Risk scoring and classification documentation.
-- Conceptual architecture and workflow diagrams.
-- Validation guidance.
-- Synthetic-data examples and implementation templates.
-- Related academic publications.
+- Detailed framework architecture.
+- Methodology and implementation documentation.
+- Model governance and validation guidance.
+- Synthetic-data demonstrations.
+- Related research publications.
 
-The complete master's dissertation and any underlying confidential taxpayer datasets are not included in this public repository.
+Restricted taxpayer information, confidential institutional methodologies, and internal operational materials are not included in this repository.
 
-## 16. Attribution and Responsible Use
+## Attribution
 
 **Framework developer:** Engr. Chinwe Vivian Aliyu  
-**Research foundation:** Professional Master's research, Miva Open University
+**Academic foundation:** Professional Master's research, Miva Open University
 
-This framework is presented as a research-derived methodological resource for educational, analytical, and professional reference.
+This is an independently presented, research-derived methodological framework. It should not be interpreted as an officially endorsed operational model or policy of any revenue authority.
 
-It is not an officially endorsed financial benchmarking standard or operational compliance risk assessment policy of any government agency.
-
-Application in a real-world environment requires appropriate validation, institutional authorization, data governance, and professional oversight.
-
-Formal citation details, licensing terms, and supporting research publications will be added as the framework documentation is finalized.
+Formal publication references and licensing information will be added when available.
